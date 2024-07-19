@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('name');
             $table->char('pekerjaan', 100);
             $table->text('alamat');
+            $table->text('country');
             $table->datetime('tgl_lahir')->nullable();
             $table->timestamps();
             $table->datetime('deleted_at')->nullable();

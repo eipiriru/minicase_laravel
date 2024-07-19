@@ -13,9 +13,11 @@
                 <div class="row justify-content-center">
                     <div class="col-lg-6">
                         <div class="card mt-5">
+                            <div class="card-header text-center">
+                                <h1 class="text-center">Tambah Data Pegawai Baru</h1>
+                            </div>
                             <div class="card-body">
-                                <h3 class="text-center">Tambah Data Pegawai Baru</h3>
-                                <a href="/" class="btn btn-primary">Back</a>
+                                <a href="/" class="btn btn-primary">Kembali</a>
                                 <br/>
     
                                 {{-- menampilkan error validasi --}}
@@ -31,7 +33,7 @@
     
                                 <br/>
                                 <!-- form validasi -->
-                                <form action="{{ route('pegawai.create') }}" method="post" enctype="multipart/form-data" id="formDropzone" class="dropzone">
+                                <form action="{{ route('pegawai.create') }}" method="post" enctype="multipart/form-data">
                                     {{ csrf_field() }}
     
                                     <div class="form-group">
@@ -40,27 +42,33 @@
                                     </div>
                                     <div>
                                         <label for="tgl_lahir">Tanggal Lahir</label>
-                                        <input class="form-control" type="text" name="tgl_lahir" value="" />
+                                        <input class="form-control" type="text" name="tgl_lahir" value="01-01-2000" />
                                     </div>
                                     <div class="form-group">
-                                        <label for="pekerjaan">pekerjaan</label>
+                                        <label for="pekerjaan">Pekerjaan</label>
                                         <input class="form-control" type="text" name="pekerjaan" value="{{ old('pekerjaan') }}">
                                     </div>
                                     <div class="form-group">
                                         <label for="alamat">Alamat</label>
                                         <input class="form-control" type="text" name="alamat" value="{{ old('alamat') }}">
                                     </div>
-                                    <div class="form-group">
-                                        <label for="department">Department</label>
-                                        <select class="js-example-basic-single" name="department">
-                                            <option value="IT">Department IT</option>
-                                            <option value="RP">Department Financial</option>
+                                    <div class="col-md-5">
+                                        <label for="country" class="form-label">Country</label>
+                                        <select class="form-select" id="country" required>
+                                            <option value="United States">United States</option>
+                                            <option value="Indonesia">Indonesia</option>
+                                            <option value="Malaysia">Malaysia</option>
+                                            <option value="Singapore">Singapore</option>
                                         </select>
+                                        <div class="invalid-feedback">
+                                            Please select a valid country.
+                                        </div>
                                     </div>
-                                    <div class="form-group">
-                                        <label for="department">File</label>
+                                    <div class="col-md-5">
+                                        <label for="file">File KTP</label>
                                         <input type="file" name="file">
                                     </div>
+                                    <br>
                                     <div class="form-group">
                                         <input class="btn btn-primary" type="submit" value="Proses">
                                     </div>

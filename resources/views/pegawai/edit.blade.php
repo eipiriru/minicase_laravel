@@ -30,12 +30,24 @@
                                         <input class="form-control" type="text" name="name" value="{{ $pegawai->name }}">
                                     </div>
                                     <div class="form-group">
-                                        <label for="pekerjaan">pekerjaan</label>
+                                        <label for="pekerjaan">Pekerjaan</label>
                                         <input class="form-control" type="text" name="pekerjaan" value="{{ $pegawai->pekerjaan }}">
                                     </div>
                                     <div class="form-group">
                                         <label for="alamat">Alamat</label>
                                         <input class="form-control" type="text" name="alamat" value="{{ $pegawai->alamat }}">
+                                    </div>
+                                    <div class="col-md-5">
+                                        <label for="country" class="form-label">Country</label>
+                                        <select class="form-select" id="country" required>
+                                            <option value="United States">United States</option>
+                                            <option value="Indonesia">Indonesia</option>
+                                            <option value="Malaysia">Malaysia</option>
+                                            <option value="Singapore">Singapore</option>
+                                        </select>
+                                        <div class="invalid-feedback">
+                                            Please select a valid country.
+                                        </div>
                                     </div>
                                     @foreach($pegawai->documents as $doc)
                                         <img src="data:image/jpeg;base64,{{ $doc->file }}" width="100px"/>

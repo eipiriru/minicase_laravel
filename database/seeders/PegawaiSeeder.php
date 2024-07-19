@@ -24,6 +24,7 @@ class PegawaiSeeder extends Seeder
                 'alamat' => $faker->address,
                 'pekerjaan' => $faker->jobTitle(),
                 'tgl_lahir' => $faker->dateTime(),
+                'country' => $faker->country,
             ]);
         }
     }

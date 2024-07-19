@@ -16,4 +16,10 @@ class DocumentController extends Controller
             ]
         );
     }
+
+    public function delete($id){
+        $document = Document::find($id);
+        $document->delete();
+        return redirect('/document');
+    }
 }

@@ -12,6 +12,7 @@ Route::get('/pegawai/hapus/{id}', [PegawaiController::class, 'delete']);
 
 use App\Http\Controllers\DocumentController;
 Route::get('/document', [DocumentController::class, 'index']);
+Route::get('/document/hapus/{id}', [DocumentController::class, 'delete']);
 
 // API
 use App\Http\Controllers\api\ApiPegawaiController;

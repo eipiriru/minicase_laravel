@@ -23,10 +23,10 @@
                                     <tr>
                                         <td>{{ $p->name }}</td>
                                         <td>{{ $p->pegawai_id }}</td>
+                                        <td>{{ $p->mime }}</td>
                                         <td><img src="data:image/jpeg;base64,{{ $p->file }}" width="100px"/></td>
                                         <td>
-                                            <a href="/pegawai/edit/{{ $p->id }}" class="btn btn-warning">Edit</a>
-                                            <a href="/pegawai/hapus/{{ $p->id }}" class="btn btn-danger">Hapus</a>
+                                            <a href="/document/hapus/{{ $p->id }}" class="btn btn-danger">Hapus</a>
                                         </td>
                                     </tr>
                                     @endforeach
