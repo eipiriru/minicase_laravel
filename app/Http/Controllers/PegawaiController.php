@@ -45,7 +45,10 @@ class PegawaiController extends Controller
         $pekerjaan = $request->pekerjaan;
         $tgl_lahir = $request->tgl_lahir;
 
+        $row_pegawai = Pegawai::all()->count();
+
         $new_pegawai = Pegawai::create([
+            'id' => $row_pegawai + 1,
             'name' => $name,
             'alamat' => $alamat,
             'pekerjaan' => $pekerjaan,
@@ -58,8 +61,11 @@ class PegawaiController extends Controller
             $doc = file_get_contents($path);
             $base64 = base64_encode($doc);
             $mime = $request->file('file')->getClientMimeType();
+
+            $row_document = Document::all()->count();
             
             $new_document = Document::create([
+                'id' => $row_document + 1,
                 'name'=> $request->file->getClientOriginalName(),
                 'file' => $base64,
                 'mime'=> $mime,
