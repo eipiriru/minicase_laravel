@@ -44,12 +44,14 @@ class PegawaiController extends Controller
         $alamat = $request->alamat;
         $pekerjaan = $request->pekerjaan;
         $tgl_lahir = $request->tgl_lahir;
+        $country = $request->country;
 
         $new_pegawai = Pegawai::create([
             'name' => $name,
             'alamat' => $alamat,
             'pekerjaan' => $pekerjaan,
             'tgl_lahir' => $tgl_lahir,
+            'country' => $country,
         ]);
 
         if ($request->hasFile('file')) {
@@ -86,6 +88,7 @@ class PegawaiController extends Controller
          $pegawai->name = $request->name;
          $pegawai->alamat = $request->alamat;
          $pegawai->pekerjaan = $request->pekerjaan;
+         $pegawai->country = $request->country;
          $pegawai->save();
          return redirect('/');
     }
