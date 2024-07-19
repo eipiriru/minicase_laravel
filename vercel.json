@@ -20,6 +20,8 @@
         "APP_SERVICES_CACHE": "/tmp/services.php",
         "VIEW_COMPILED_PATH": "/tmp",
 
+        "APP_KEY":"base64:pMwl4/hohmDQb8sli2H/69/XSJ6Tvk8EOO/HPmkAk18=",
+
         "CACHE_DRIVER": "array",
         "LOG_CHANNEL": "stderr",
         "SESSION_DRIVER": "cookie",
