@@ -15,7 +15,7 @@
                         <div class="card mt-5">
                             <div class="card-body">
                                 <h3 class="text-center">Tambah Data Pegawai Baru</h3>
-                                <a href="/" class="btn btn-primary">Kembali</a>
+                                <a href="/" class="btn btn-primary">Back</a>
                                 <br/>
     
                                 {{-- menampilkan error validasi --}}
