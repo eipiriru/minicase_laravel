@@ -1,0 +1,36 @@
+{
+    "version": 2,
+      "framework": null,
+    "functions": {
+        "api/index.php": { "runtime": "vercel-php@0.7.1" }
+    },
+    "routes": [{
+        "src": "/(.*)",
+        "dest": "/api/index.php"
+    }],
+    "env": {
+        "APP_ENV": "production",
+        "APP_DEBUG": "true",
+        "APP_URL": "https://yourprojectdomain.com",
+
+        "APP_CONFIG_CACHE": "/tmp/config.php",
+        "APP_EVENTS_CACHE": "/tmp/events.php",
+        "APP_PACKAGES_CACHE": "/tmp/packages.php",
+        "APP_ROUTES_CACHE": "/tmp/routes.php",
+        "APP_SERVICES_CACHE": "/tmp/services.php",
+        "VIEW_COMPILED_PATH": "/tmp",
+
+        "CACHE_DRIVER": "array",
+        "LOG_CHANNEL": "stderr",
+        "SESSION_DRIVER": "cookie",
+
+        "POSTGRES_URL":"postgres://default:wsUdDle46Eup@ep-muddy-pine-a1u69ux8-pooler.ap-southeast-1.aws.neon.tech:5432/verceldb?sslmode=require",
+        "POSTGRES_PRISMA_URL":"postgres://default:wsUdDle46Eup@ep-muddy-pine-a1u69ux8-pooler.ap-southeast-1.aws.neon.tech:5432/verceldb?sslmode=require&pgbouncer=true&connect_timeout=15",
+        "POSTGRES_URL_NO_SSL":"postgres://default:wsUdDle46Eup@ep-muddy-pine-a1u69ux8-pooler.ap-southeast-1.aws.neon.tech:5432/verceldb",
+        "POSTGRES_URL_NON_POOLING":"postgres://default:wsUdDle46Eup@ep-muddy-pine-a1u69ux8.ap-southeast-1.aws.neon.tech:5432/verceldb?sslmode=require",
+        "POSTGRES_USER":"default",
+        "POSTGRES_HOST":"ep-muddy-pine-a1u69ux8-pooler.ap-southeast-1.aws.neon.tech",
+        "POSTGRES_PASSWORD":"wsUdDle46Eup",
+        "POSTGRES_DATABASE":"verceldb"
+    }
+}

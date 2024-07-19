@@ -14,7 +14,7 @@
                     <div class="col-lg-6">
                         <div class="card mt-5">
                             <div class="card-body">
-                                <h3 class="text-center">Tambah Data Pegawai</h3>
+                                <h3 class="text-center">Tambah Data Pegawai Baru</h3>
                                 <a href="/" class="btn btn-primary">Kembali</a>
                                 <br/>
     
@@ -50,12 +50,16 @@
                                         <label for="alamat">Alamat</label>
                                         <input class="form-control" type="text" name="alamat" value="{{ old('alamat') }}">
                                     </div>
-                                    <div class="">
+                                    <div class="form-group">
                                         <label for="department">Department</label>
                                         <select class="js-example-basic-single" name="department">
                                             <option value="IT">Department IT</option>
                                             <option value="RP">Department Financial</option>
                                         </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="department">File</label>
+                                        <input type="file" name="file">
                                     </div>
                                     <div class="form-group">
                                         <input class="btn btn-primary" type="submit" value="Proses">
