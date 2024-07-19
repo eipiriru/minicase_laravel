@@ -14,6 +14,7 @@ class Document extends Model
         'file',
         'mime',
         'pegawai_id',
+        'id',
     ];
 
     public function pegawai(){

@@ -16,6 +16,7 @@ class Pegawai extends Model
         'alamat',
         'pekerjaan',
         'tgl_lahir',
+        'id',
     ];
     protected $dates = ['deleted_at'];
     
